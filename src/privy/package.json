@@ -1,0 +1,26 @@
+{
+    "name": "@towns/privy",
+    "type": "module",
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "yarn lint --fix"
+    },
+    "devDependencies": {
+        "@towns-protocol/prettier-config": "workspace:^",
+        "@typescript-eslint/eslint-plugin": "^6.10.0",
+        "@typescript-eslint/parser": "^7.14.1",
+        "eslint": "^8.53.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-react": "^7.32.2",
+        "typescript": "^5.1.6"
+    },
+    "peerDependencies": {
+        "@privy-io/react-auth": "2.4.3",
+        "@privy-io/wagmi-connector": "^0.1.13",
+        "@types/react": "^18.2.11",
+        "@types/react-dom": "^18.2.4",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "use-towns-client": "workspace:^"
+    }
+}
