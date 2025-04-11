@@ -1,5 +1,5 @@
 import "./App.css";
-import { useLogin } from "@privy-io/react-auth";
+import { useLogin, useLogout } from "@privy-io/react-auth";
 import { useEmbeddedWallet } from "./privy";
 import { baseSepolia } from "viem/op-stack";
 import { getSigner } from "./privy/getSigner";
@@ -13,6 +13,7 @@ function App() {
     embeddedWallet,
   } = useEmbeddedWallet();
   const { login } = useLogin();
+  const { logout } = useLogout();
 
   const signMessage = async () => {
     const signer = await getSigner(embeddedWallet, baseSepolia.id);
@@ -25,7 +26,7 @@ function App() {
     <>
       <button onClick={() => login()}>Login</button>
       <button onClick={() => signMessage()}>Sign Message</button>
-
+      <button onClick={() => logout()}>Logout</button>
       <hr />
       <p>Wallets Ready</p>
       <pre>{JSON.stringify(walletsReady, null, 2)}</pre>
